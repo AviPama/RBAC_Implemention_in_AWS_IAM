@@ -2,12 +2,10 @@ provider "aws" {
   region = "us-east-1" 
 }
 
-# Create an IAM group
 resource "aws_iam_group" "example_group" {
   name = "example_group"
 }
 
-# Attach a policy to the group
 resource "aws_iam_group_policy" "example_group_policy" {
   group = aws_iam_group.example_group.name
 
